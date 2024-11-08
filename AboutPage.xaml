@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.AboutPage"
+             Title="Sobre"
+             BackgroundColor="Black">
+
+    <VerticalStackLayout Padding="20,50" Spacing="15">
+        <Label
+            Text="Sobre o Aplicativo"
+            FontSize="28"
+            FontAttributes="Bold"
+            TextColor="White"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Desenvolvedor: Diego Nascimento de Novaes(Agenda 13 etec)"
+            FontSize="18"
+            TextColor="DarkOliveGreen"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="Ano de Desenvolvimento: 2024"
+            FontSize="18"
+            TextColor="DarkOliveGreen"
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

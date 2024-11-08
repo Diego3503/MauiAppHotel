@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.MainPage"
+            BackgroundColor="#121012">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,20" Spacing="15">
+
+            <Label
+                Text="Reserva de Hotel"
+                FontSize="50"
+                FontFamily="Monotype Corsiva"
+                FontAttributes="Bold"
+                TextColor="#028a0f"
+                HorizontalOptions="Center" />
+
+            <Label Text="Número de Adultos:" TextColor="#028a0f" FontFamily="Mv boli" FontSize="22" />
+            <HorizontalStackLayout Spacing="10">
+                <Button
+                    Text="-"
+                    BackgroundColor="#028a0f"
+                    TextColor="White"
+                    Clicked="OnDecreaseAdultsClicked" />
+                <Label x:Name="AdultsCountLabel" Text="0" TextColor="White" FontSize="18" VerticalOptions="Center" />
+                <Button
+                    Text="+"
+                    BackgroundColor="#028a0f"
+                    TextColor="White"
+                    Clicked="OnIncreaseAdultsClicked" />
+            </HorizontalStackLayout>
+
+            
+            <Label Text="Número de Crianças:" TextColor="#028a0f" FontFamily="Mv boli" FontSize="22" />
+            <HorizontalStackLayout Spacing="10">
+                <Button
+                    Text="-"
+                    BackgroundColor="#028a0f"
+                    TextColor="White"
+                    Clicked="OnDecreaseChildrenClicked" />
+                <Label x:Name="ChildrenCountLabel" Text="0" TextColor="White" FontSize="18" VerticalOptions="Center" />
+                <Button
+                    Text="+"
+                    BackgroundColor="#028a0f"
+                    TextColor="White"
+                    Clicked="OnIncreaseChildrenClicked" />
+            </HorizontalStackLayout>
+
+            
+            <Label Text="Tipo de Suíte:" TextColor="#028a0f" FontFamily="Mv boli" FontSize="22" />
+            <Picker x:Name="SuitePicker" BackgroundColor="White" TextColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Suíte Simples</x:String>
+                        <x:String>Suíte Luxo</x:String>
+                        <x:String>Suíte Premium</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            
+            <Label Text="Data de Entrada:" TextColor="#028a0f" FontFamily="Mv boli" FontSize="22" />
+            <DatePicker x:Name="CheckInDatePicker" BackgroundColor="White" TextColor="Black" />
+
+            
+            <Label Text="Data de Saída:" TextColor="#028a0f" FontFamily="Mv boli" FontSize="22" />
+            <DatePicker x:Name="CheckOutDatePicker" BackgroundColor="White" TextColor="Black" />
+
+            
+                <Label Text="Valor Pago por Dia (R$):" TextColor="#028a0f" FontFamily="Mv boli" FontSize="22" />
+            <Entry
+                x:Name="DailyRateEntry"
+                Placeholder="Digite o valor por dia"
+                Keyboard="Numeric"
+                BackgroundColor="White"
+                TextColor="Black" />
+
+            
+            <Button
+                Text="Salvar Reserva"
+                Clicked="OnSaveReservation"
+                BackgroundColor="#028a0f"
+                TextColor="White"
+                HorizontalOptions="Fill" />
+
+            <Button
+                Text="Sobre"
+                Clicked="OnAboutClicked"
+                BackgroundColor="#028a0f"
+                TextColor="White"
+                HorizontalOptions="Fill" />
+
+       
+            <Label
+                x:Name="ConfirmationLabel"
+                Text=""
+                TextColor="#028a0f"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
